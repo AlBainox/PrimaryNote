@@ -2,11 +2,11 @@
 
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Tytuł notatki</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="T...">
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="{{note.name}}" (input)="onTitleChanged($event)">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Treść</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{note?.description}}</textarea>
 </div>
 <button type="button" class="btn btn-outline-primary">Zapisz</button> 
 

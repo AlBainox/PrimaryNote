@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Note } from '../note';
 
 @Component({
   selector: 'app-edit-table',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './edit-table.css'
 })
 export class EditTable {
+@Input() note: Note | any;
 
+onTitleChanged(event: Event){
+  (event.target as HTMLInputElement).value = this.note.name;
+}
 }
